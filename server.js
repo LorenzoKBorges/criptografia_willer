@@ -9,7 +9,6 @@ const app = express()
 
 app.use(express.json())
 app.use(cors())
-app.use(express.static("./public"))
 
 app.get('/usuarios', async (req, res) =>{
     const usuarios = await pool.query("SELECT * FROM usuarios")
